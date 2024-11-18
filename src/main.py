@@ -3,7 +3,7 @@ operator = None
 operand2 = None
 
 def main():
-    ask_user_input();
+    ask_user_input()
 
     # Perform the operation based on the operator
     if operator == '+':
