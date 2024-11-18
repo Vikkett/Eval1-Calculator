@@ -7,9 +7,7 @@ def main():
     ask_user_input()
     global result
     result = calculate(operand1, operator, operand2)
-
-    # Print the result
-    print("Result:", result)
+    display_result(operand1, operator, operand2, result)
 
 def ask_user_input():
     # Get first operand from the user
@@ -43,6 +41,9 @@ def calculate(op1, ope, op2):
             print("Invalid operator.")
             return
     return result
+
+def display_result(op1, ope, op2, res):
+    print(str(op1) + " " + ope + " " + str(op2) + " = " + str(res))
 
 # Call the main function to run the program
 main()
