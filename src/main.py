@@ -1,30 +1,30 @@
 operand1 = None
 operator = None
 operand2 = None
-result = None
 
 def main():
     ask_user_input()
-    global result
     result = calculate(operand1, operator, operand2)
     display_result(operand1, operator, operand2, result)
 
 def ask_user_input():
     # Get first operand from the user
     global operand1
-    operand1 = float(input("Enter the first operand: "))
+    operand1 = ask_user_float_input("Enter the first operand: ")
 
     global operator
     # Get the operator from the user
-    operator = input("Enter an operator (+, -, *, /): ")
+    operator = input("Enter an operator (+, -, *, /, ^): ")
 
     global operand2
     # Get second operand from the user
-    operand2 = float(input("Enter the second operand: "))
+    operand2 = ask_user_float_input("Enter the second operand: ")
+
+def ask_user_float_input(msg):
+    return float(input(msg))
 
 def calculate(ope1, oper, ope2):
     # Perform the operation based on the operator
-    res = None
     match oper:
         case '+':
             res = ope1 + ope2
@@ -37,6 +37,10 @@ def calculate(ope1, oper, ope2):
                 print("Error: Division by zero is undefined.")
                 return
             res = ope1 / ope2
+        case '^':
+            res = 1
+            for count in range(int(ope1)):
+                res = res * ope2
         case _:
             print("Invalid operator.")
             return
