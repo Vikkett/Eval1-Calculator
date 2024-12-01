@@ -24,9 +24,9 @@ Prenez le temps de bien comprendre l'exemple de code livré dans la théorie (ve
 
 ### Tâche 02 - Dessiner le diagramme de classe
 
-Etat de l'architecture avant la modification
+Voir le commit présentant la différence d'architecture avant et après le MathRequest.
 
-//add commit
+[Comparaison avant et après le MathRequest](https://github.com/CPNV-CFC-I319/Eval1-Calculator/commit/eb5c798fe5ca40c2fb7b278e83a99f71fb0c07ea)
 
 Etat de l'architecture pour l'implémentation d'une classe "MathRequest"
 
