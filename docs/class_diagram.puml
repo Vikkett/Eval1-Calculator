@@ -1,16 +1,26 @@
 @startuml
 'https://plantuml.com/class-diagram
 
+class MathRequest{
+ - ope1:float
+ - oper:char
+ - ope2:float
+ - res:float
+
+ + MathRequest(float:ope1, char:oper, float:ope2)
+ + <set>Result():float
+}
+
 class main{
- - operand1 : float
- - operator : char
- - operand2 : float
- - result : float
+ -mathRequest:MathRequest
 
  +main():void
- -ask_user_input():void
- -calculate(float:operand1, char:operator, float:operand2):float
- -display_result(float:operand1, char:operator, float:operand2, int:result):void
+ -ask_user_input():MathRequest
+ -calculate(MathRequest:mathRequest):void
+ -display_result(MatRequest:mathRequest):void
  -ask_user_float_input(string:message):float
 }
+
+main .-> MathRequest
+
 @enduml
