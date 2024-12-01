@@ -30,7 +30,7 @@ Etat de l'architecture avant la modification
 
 Etat de l'architecture pour l'implémentation d'une classe "MathRequest"
 
-![classDiagramWithMathRequest]((docs/class_diagram.png))
+![classDiagramWithMathRequest](docs/class_diagram.png)
 
 ## Tâche 03 - Récupérer/Préparer votre projet
 
