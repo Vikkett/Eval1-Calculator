@@ -2,31 +2,22 @@
 
 Ce dépôt a été créé à des fins pédagogiques. Il permet de s'entraîner à l'utilisation de git-flow tout comme à s'initier à la programmation orientée objet.
 
-## Comment débuter l'évaluation
+## Comment débuter le travail
 
-* "Clone" le dépôt à l'aide de PyCharm.
-* Exécuter-le pour valider que le programme actuel fonctionne bien sur votre environnement.
-* Activer git flow pour créer la branche "develop".
+Il s'agit de la suite de la première évaluation. Comme vous le verrez à la tâche "03", vous pourrez soit choisir de continuer sur votre code, soit reprendre ce dépôt.
 
-```
-  git flow init
-```
-
-## TODO
-
-Objectifs:
-
-Appliquer les concepts git-flow et POO à notre projet "Calculator".
-
+## Backlog
 ### Tâche 01 - Identifier les futurs objets
 
 Prenez le temps de bien comprendre l'exemple de code livré dans la théorie (vehicle and driver) et tentez d'identifier les objets dont nous aurions besoin pour modéliser correctement la calculatrice.
+
+* [Lien avec le gitbook](https://cpnv-cfc.gitbook.io/i319-concevoir-et-implementer-des-applications/semaines-4-8/theorie-et-concepts/introduction-a-la-poo)
 
 ### Tâche 02 - Dessiner le diagramme de classe
 
 Voir le commit présentant la différence d'architecture avant et après le MathRequest.
 
-[Comparaison avant et après le MathRequest](https://github.com/CPNV-CFC-I319/Eval1-Calculator/commit/eb5c798fe5ca40c2fb7b278e83a99f71fb0c07ea)
+* [Comparaison avant et après le MathRequest](https://github.com/CPNV-CFC-I319/Eval1-Calculator/commit/eb5c798fe5ca40c2fb7b278e83a99f71fb0c07ea)
 
 Etat de l'architecture pour l'implémentation d'une classe "MathRequest"
 
@@ -45,6 +36,8 @@ Comme vous pouvez le voir, la modification de l'architecture (le diagramme de cl
 ## Tâche 04 - Ouvrez la branche dédiée au développement de "MathRequest"
 
 Il s'agit maintenant d'implémenter cette modification sur la branche du nom de "feature/MathRequest".
+
+* [Documentation de référence pour gitflow](https://cpnv-cfc.gitbook.io/i319-concevoir-et-implementer-des-applications/semaines-4-8/theorie-et-concepts/git-flow)
 
 ```
    git flow feature start MathRequest
