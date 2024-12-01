@@ -1,6 +1,6 @@
-# Setup Check
+# Calculator
 
-This repository is used for educational purposes.
+Ce dépôt a été créé à des fins pédagogiques. Il permet de s'entraîner à l'utilisation de git-flow tout comme à s'initier à la programmation orientée objet.
 
 ## Comment débuter l'évaluation
 
@@ -12,59 +12,43 @@ This repository is used for educational purposes.
   git flow init
 ```
 
-* !!! IMPORTANT - ne publiez pas votre code (git push) avant la fin de l'examen. !!!
-
 ## TODO
 
-Vous devez réaliser 2 tâches durant cette évaluation.
+Objectifs:
 
-### Tâche 01 - Une fonction spécifique pour récupérer les opérandes
+Appliquer les concepts git-flow et POO à notre projet "Calculator".
 
-![classDiagram.png](docs/class_diagram.png)
+### Tâche 01 - Identifier les futurs objets
 
-* Voici le code final à utiliser pour la fonction "ask_user_input()"
+Prenez le temps de bien comprendre l'exemple de code livré dans la théorie (vehicle and driver) et tentez d'identifier les objets dont nous aurions besoin pour modéliser correctement la calculatrice.
 
-```python
-    def ask_user_input():
-        # Get first operand from the user
-        global operand1
-        operand1 = ask_user_float_input("Enter the first operand: ")
-    
-        global operator
-        # Get the operator from the user
-        operator = input("Enter an operator (+, -, *, /): ")
-    
-        global operand2
-        # Get second operand from the user
-        operand2 = ask_user_float_input("Enter the second operand: ")
+### Tâche 02 - Dessiner le diagramme de classe
+
+Etat de l'architecture avant la modification
+
+//add commit
+
+Etat de l'architecture pour l'implémentation d'une classe "MathRequest"
+
+![classDiagramWithMathRequest]((docs/class_diagram.png))
+
+## Tâche 03 - Récupérer/Préparer votre projet
+
+Avant de partir la "tête la première", il est important d'avoir une bonne stratégie de branche et d'enrichir petit à petit votre code.
+Vous pouvez soit partir du code actuel, soit partir de ce dépôt:
+
+* Soit vous décider de "re-forcker-cloner" ce dépôt, et initaliser git-flow.
+* Soit vous pouvez continuer sur votre code. Prenez bien soin de détecter les éventuelles différences que vous avez avec cette version du projet.
+
+Comme vous pouvez le voir, la modification de l'architecture (le diagramme de classe) a été réalisé sur la branche develop. Il est important d'être sur cette branche avant de continuer le travail.
+
+## Tâche 04 - Ouvrez la branche dédiée au développement de "MathRequest"
+
+Il s'agit maintenant d'implémenter cette modification sur la branche du nom de "feature/MathRequest".
+
+```
+   git flow feature start MathRequest
 ```
 
-* Optionnel - vous commitez avec le commentaire suivant "refactor: externalize the logic to ask and retrieve a float"
-
-### Tâche 02 - Opérateur puissance
-
-* Ajouter la possiblité à vos utilisateurs de pouvoir faire des puissances
-
-```python
-    # Fonction puissance
-    def maFonction(n):
-      somme = 1
-      for count in range(int(n)):
-        somme = somme * 2
-      return somme
-    
-    #Ce print sert à tester la fonction
-    print(maFonction(3))
-```
-
-* Optionnel - vous commitez avec le commentaire suivant "feat: power operator"
-
-# Livrable
-
-Une fois terminé, vous pouvez:
-
-* soit continuer de travailler sur votre poste, 
-* soit aller en pause. 
- 
-De retour à 12h00 pour la livraison du code.
+Regardez l'architecture imposée et tentez de réussir à faire fonctionner votre calculatrice, avec l'implémentation de MathRequest.
 
