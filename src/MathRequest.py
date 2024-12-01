@@ -1,10 +1,12 @@
 class MathRequest:
 
     def __init__ (self, ope1, oper, ope2):
-        raise NotImplementedError
+        self.ope1 = ope1
+        self.oper = oper
+        self.ope2 = ope2
 
     def get_ope1(self):
-        raise NotImplementedError
+        return self.ope1
 
     def get_oper(self):
         raise NotImplementedError
