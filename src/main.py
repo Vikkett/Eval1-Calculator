@@ -29,7 +29,7 @@ def calculate(ope1, oper, ope2):
         case '+':
             res = ope1 + ope2
         case '-':
-            res = ope2 - ope2
+            res = ope1 - ope2
         case '*':
             res = ope1 * ope2
         case '/':
@@ -47,7 +47,10 @@ def calculate(ope1, oper, ope2):
     return res
 
 def display_result(op1, ope, ope2, res):
-    print(str(op1) + " " + ope + " " + str(ope2) + " = " + str(res))
+    # Print the result
+        print(str(op1) + " " + ope + " " + str(ope2) + " = " + str(res))
+
+
 
 # Call the main function to run the program
 main()
