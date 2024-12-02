@@ -31,9 +31,9 @@ Vous pouvez soit partir du code actuel, soit partir de ce dépôt:
 * Soit vous décider de "re-forcker-cloner" ce dépôt, et initaliser git-flow.
 * Soit vous pouvez continuer sur votre code. Prenez bien soin de détecter les éventuelles différences que vous avez avec cette version du projet.
 
-Comme vous pouvez le voir, la modification de l'architecture (le diagramme de classe) a été réalisé sur la branche develop. Il est important d'être sur cette branche avant de continuer le travail.
+Comme vous pouvez le voir, la modification de l'architecture (le diagramme de classe) a été réalisée sur la branche _develop_. Il est important d'être sur cette branche avant de continuer le travail.
 
-## Tâche 04 - Ouvrez la branche dédiée au développement de "MathRequest"
+## Tâche 04 - Créer la branche "feature/MathRequest"
 
 Il s'agit maintenant d'implémenter cette modification sur la branche du nom de "feature/MathRequest".
 
@@ -45,3 +45,6 @@ Il s'agit maintenant d'implémenter cette modification sur la branche du nom de 
 
 Regardez l'architecture imposée et tentez de réussir à faire fonctionner votre calculatrice, avec l'implémentation de MathRequest.
 
+1) débutez par écrire la classe de test
+2) faire échouer le test
+3) 
