@@ -1,70 +1,47 @@
-# Setup Check
+# Calculator
 
-This repository is used for educational purposes.
+Ce dépôt a été créé à des fins pédagogiques. Il permet de s'entraîner à l'utilisation de git-flow tout comme à s'initier à la programmation orientée objet.
 
-## Comment débuter l'évaluation
+## Comment débuter le travail
 
-* "Clone" le dépôt à l'aide de PyCharm.
-* Exécuter-le pour valider que le programme actuel fonctionne bien sur votre environnement.
-* Activer git flow pour créer la branche "develop".
+Il s'agit de la suite de la première évaluation. Comme vous le verrez à la tâche "03", vous pourrez soit choisir de continuer sur votre code, soit reprendre ce dépôt.
+
+## Backlog
+### Tâche 01 - Identifier les futurs objets
+
+Prenez le temps de bien comprendre l'exemple de code livré dans la théorie (vehicle and driver) et tentez d'identifier les objets dont nous aurions besoin pour modéliser correctement la calculatrice.
+
+* [Lien avec le gitbook](https://cpnv-cfc.gitbook.io/i319-concevoir-et-implementer-des-applications/semaines-4-8/theorie-et-concepts/introduction-a-la-poo)
+
+### Tâche 02 - Dessiner le diagramme de classe
+
+Voir le commit présentant la différence d'architecture avant et après le MathRequest.
+
+* [Comparaison avant et après le MathRequest](https://github.com/CPNV-CFC-I319/Eval1-Calculator/commit/eb5c798fe5ca40c2fb7b278e83a99f71fb0c07ea)
+
+Etat de l'architecture pour l'implémentation d'une classe "MathRequest"
+
+![classDiagramWithMathRequest](docs/class_diagram.png)
+
+## Tâche 03 - Récupérer/Préparer votre projet
+
+Avant de partir la "tête la première", il est important d'avoir une bonne stratégie de branche et d'enrichir petit à petit votre code.
+Vous pouvez soit partir du code actuel, soit partir de ce dépôt:
+
+* Soit vous décider de "re-forcker-cloner" ce dépôt, et initaliser git-flow.
+* Soit vous pouvez continuer sur votre code. Prenez bien soin de détecter les éventuelles différences que vous avez avec cette version du projet.
+
+Comme vous pouvez le voir, la modification de l'architecture (le diagramme de classe) a été réalisé sur la branche develop. Il est important d'être sur cette branche avant de continuer le travail.
+
+## Tâche 04 - Ouvrez la branche dédiée au développement de "MathRequest"
+
+Il s'agit maintenant d'implémenter cette modification sur la branche du nom de "feature/MathRequest".
+
+* [Documentation de référence pour gitflow](https://cpnv-cfc.gitbook.io/i319-concevoir-et-implementer-des-applications/semaines-4-8/theorie-et-concepts/git-flow)
 
 ```
-  git flow init
+   git flow feature start MathRequest
 ```
 
-* !!! IMPORTANT - ne publiez pas votre code (git push) avant la fin de l'examen. !!!
-
-## TODO
-
-Vous devez réaliser 2 tâches durant cette évaluation.
-
-### Tâche 01 - Une fonction spécifique pour récupérer les opérandes
-
-![classDiagram.png](docs/class_diagram.png)
-
-* Voici le code final à utiliser pour la fonction "ask_user_input()"
-
-```python
-    def ask_user_input():
-        # Get first operand from the user
-        global operand1
-        operand1 = ask_user_float_input("Enter the first operand: ")
-    
-        global operator
-        # Get the operator from the user
-        operator = input("Enter an operator (+, -, *, /): ")
-    
-        global operand2
-        # Get second operand from the user
-        operand2 = ask_user_float_input("Enter the second operand: ")
-```
-
-* Optionnel - vous commitez avec le commentaire suivant "refactor: externalize the logic to ask and retrieve a float"
-
-### Tâche 02 - Opérateur puissance
-
-* Ajouter la possiblité à vos utilisateurs de pouvoir faire des puissances
-
-```python
-    # Fonction puissance
-    def maFonction(n):
-      somme = 1
-      for count in range(int(n)):
-        somme = somme * 2
-      return somme
-    
-    #Ce print sert à tester la fonction
-    print(maFonction(3))
-```
-
-* Optionnel - vous commitez avec le commentaire suivant "feat: power operator"
-
-# Livrable
-
-Une fois terminé, vous pouvez:
-
-* soit continuer de travailler sur votre poste, 
-* soit aller en pause. 
- 
-De retour à 12h00 pour la livraison du code.
+Regardez l'architecture imposée et tentez de réussir à faire fonctionner votre calculatrice, avec l'implémentation de MathRequest.
 
