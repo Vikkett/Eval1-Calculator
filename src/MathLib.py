@@ -1,28 +1,30 @@
+from src.MathRequest import MathRequest
 class MathLib:
 
-def calculate(math_request):
-    # Perform the operation based on the operator
-    ope1 = math_request.get_ope1()
-    oper = math_request.get_oper()
-    ope2 = math_request.get_ope2()
+    @classmethod
+    def execute(self, mathRequest):
+        # Perform the operation based on the operator
+        ope1 = mathRequest.get_ope1()
+        oper = mathRequest.get_oper()
+        ope2 = mathRequest.get_ope2()
 
-    match oper:
-        case '+':
-            res = ope1 + ope2
-        case '-':
-            res = ope1 - ope2
-        case '*':
-            res = ope1 * ope2
-        case '/':
-            if ope2 == 0:
-                print("Error: Division by zero is undefined.")
+        match oper:
+            case 'add':
+                mathRequest.set_res(ope1 + ope2)
+            case 'sub':
+                mathRequest.set_res(ope1 - ope2)
+            case 'mul':
+                mathRequest.set_res(ope1 * ope2)
+            case 'div':
+                if ope2 == 0:
+                    print("Error: Division by zero is undefined.")
+                    return
+                mathRequest.set_res(ope1 / ope2)
+            case 'pow':
+                res = 1
+                for count in range(int(ope1)):
+                    mathRequest.set_res(ope1 ** ope2)
+            case _:
+                print("Invalid operator.")
                 return
-            res = ope1 / ope2
-        case '^':
-            res = 1
-            for count in range(int(ope1)):
-                res = res * ope2
-        case _:
-            print("Invalid operator.")
-            return
-    return res
+        return
