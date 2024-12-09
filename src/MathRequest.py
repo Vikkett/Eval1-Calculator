@@ -4,6 +4,7 @@ class MathRequest:
         self.ope1 = ope1
         self.oper = oper
         self.ope2 = ope2
+        self.res = None
 
     def get_ope1(self):
         return self.ope1

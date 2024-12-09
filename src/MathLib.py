@@ -21,9 +21,10 @@ class MathLib:
                     return
                 mathRequest.set_res(ope1 / ope2)
             case 'pow':
-                res = 1
-                for count in range(int(ope1)):
-                    mathRequest.set_res(ope1 ** ope2)
+                mathRequest.set_res(ope1 ** ope2)
+            case 'root':
+                mathRequest.set_res(round(ope1 ** (1 / ope2), 2))
+
             case _:
                 print("Invalid operator.")
                 return
