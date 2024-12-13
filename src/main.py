@@ -1,15 +1,12 @@
 from src.MathRequest import MathRequest
-<<<<<<< HEAD
 def main():
     math_request = ask_user_input()
     math_request.set_res(calculate(math_request))
-=======
 from src.MathLib import MathLib
 
 def main():
     math_request = ask_user_input()
     math_request.set_res(MathLib.execute(math_request))
->>>>>>> feature/MathLib
     display_result(math_request)
 
 def ask_user_input() -> MathRequest:
@@ -17,11 +14,11 @@ def ask_user_input() -> MathRequest:
     ope1 = ask_user_float_input("Enter the first operand: ")
 
     # Get the operator from the user
-<<<<<<< HEAD
+
     oper = input("Enter an operator (+, -, *, /, ^): ")
-=======
+
     oper = input("Enter an operator (add, sub, mul, div, pow): ")
->>>>>>> feature/MathLib
+
 
     # Get second operand from the user
     ope2 = ask_user_float_input("Enter the second operand: ")
@@ -31,7 +28,7 @@ def ask_user_input() -> MathRequest:
 def ask_user_float_input(msg):
     return float(input(msg))
 
-<<<<<<< HEAD
+
 def calculate(math_request):
     # Perform the operation based on the operator
     ope1 = math_request.get_ope1()
@@ -63,11 +60,9 @@ def display_result(math_request):
     # Print the result
         print(math_request.to_string())
 
-=======
 def display_result(math_request):
     # Print the result
         print(math_request.to_string())
->>>>>>> feature/MathLib
 
 # Call the main function to run the program
 main()
